@@ -1,0 +1,23 @@
+{
+  "name": "searchOnInstagram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "download": "6.2.5",
+    "lodash": "4.17.10",
+    "moment": "2.22.1",
+    "request": "2.85.0",
+    "yargs": "11.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  }
+}
