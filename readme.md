@@ -7,7 +7,9 @@ $ npm install
 # usage
 
 $ node app help
+
 $ node app search --tag="dog"
+
 $ node app search -t="dog"
 
 # structure
