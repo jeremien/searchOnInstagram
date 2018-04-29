@@ -1,16 +1,16 @@
-#installation
+# installation
 
 node > 9.x
 
 $ npm install
 
-#usage
+# usage
 
 $ node app help
 $ node app search --tag="dog"
 $ node app search -t="dog"
 
-#structure
+# structure
 
 - résultats des recherches :
 
