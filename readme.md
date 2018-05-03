@@ -4,6 +4,8 @@ node > 9.x
 
 $ npm install
 
+> config/config.js > instagram keys + token
+
 # usage
 
 $ node app help
@@ -11,6 +13,8 @@ $ node app help
 $ node app search --tag="dog"
 
 $ node app search -t="dog"
+
+$ node app infos -t="dog"
 
 # structure
 
