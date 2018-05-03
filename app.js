@@ -2,6 +2,8 @@ const yargs = require('yargs');
 
 const getData = require('./utils/getData');
 const getImage = require('./utils/getImage');
+const getTags = require('./utils/getTags');
+const writeFile = require('./utils/writeFile');
 
 const options = {
     tag: {
@@ -13,6 +15,9 @@ const options = {
 
 const argv = yargs
     .command('search', 'search on instagram with a tag', {
+        tag: options.tag
+    })
+    .command('infos', 'get infos on a tag on instagram with a tag', {
         tag: options.tag
     })
     .help()
@@ -32,6 +37,14 @@ if (command === 'search') {
             let obj = res.graphql.hashtag.edge_hashtag_to_media.edges;
             getImage.getImageByUrl( obj, search);
         }
+    });
+
+} else if (command === 'infos') {
+
+    let search = argv.tag;
+
+    getTags.getTagsInfos(search, (res) => {
+        writeFile.writeDataToFile(res, search);
     });
 
 } else {
