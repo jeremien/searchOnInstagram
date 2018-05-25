@@ -10,11 +10,14 @@ var getImageByUrl = (url, folder) => {
     });
 
     let t = [];
+
     url.forEach( (u) => {
         t.push(u.node);
     });
 
     let obj = _.map(t, (x) => {
+
+
 
         let name = x.display_url.split('/');
         name = name[name.length -1];
@@ -35,7 +38,6 @@ var getImageByUrl = (url, folder) => {
             console.log(`Image : ${x.url} in ${folder} is downloaded`);
         });
     });
-
 
     if (fs.existsSync(`media/${folder}/data.json`)) {
         fs.readFile(`media/${folder}/data.json`, function(err, content) {
