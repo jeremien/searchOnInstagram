@@ -4,6 +4,7 @@ const cron = require('node-cron');
 const getData = require('./utils/getData');
 const getImage = require('./utils/getImage');
 const getTags = require('./utils/getTags');
+const getComments = require('./utils/getComments');
 const writeFile = require('./utils/writeFile');
 
 const options = {
@@ -64,6 +65,7 @@ if (command === 'search') {
           } else {
             let obj = res.graphql.hashtag.edge_hashtag_to_media.edges;
             getImage.getImageByUrl( obj, tag);
+            getComments.getComments(obj, tag);
           }
         });
       });

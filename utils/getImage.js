@@ -17,8 +17,6 @@ var getImageByUrl = (url, folder) => {
 
     let obj = _.map(t, (x) => {
 
-
-
         let name = x.display_url.split('/');
         name = name[name.length -1];
 
@@ -35,7 +33,7 @@ var getImageByUrl = (url, folder) => {
 
     obj.map(x => {
         download(x.url, `media/${folder}`).then(() => {
-            console.log(`Image : ${x.url} in ${folder} is downloaded`);
+            // console.log(`Image : ${x.url} in ${folder} is downloaded`);
         });
     });
 

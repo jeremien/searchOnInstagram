@@ -43,3 +43,16 @@ Et puis, comment puis-je faire pour récupérer le nombre d'images postées par
 secondes et par villes sur Instagram ?
 De même, comment puis-je faire pour récupérer tous les hashtags existant qui
 sont utilisés sur Instagram?
+
+# app generative
+
+- parser le json extraire les commentaires
+- enrichir une base
+- 4 écrans qui affiche 4 phrases
+
+
+
+
+
+
+
